@@ -17,17 +17,14 @@ public class DetailTest {
 
     @Test
     public void testGetMovieDetails(){
-
         given()
                 .header("authorization", myToken)
                 .when()
-                .get("/movie/1254113")
+                .get("/movie/1359227")
                 .then()
                 .statusCode(200)
-                .body("id", equalTo(1254113))
-                .body("release_date",equalTo("2024-08-02"))
-                .body("title",equalTo("Naruto : Shippuden"))
-                .body("vote_average",equalTo(7.0f))
-                .log().all();
+                .body("id", equalTo(1359227))
+                .body("release_date",equalTo("2024-10-17"))
+                .body("title",equalTo("LEGO Marvel Avengers: Mission Demolition"));
     }
 }
