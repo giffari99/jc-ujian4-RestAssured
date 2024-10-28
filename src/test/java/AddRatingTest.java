@@ -35,4 +35,13 @@ public class AddRatingTest {
         System.out.println(response.getBody().jsonPath().getString("status_message"));
     }
 
+
+    @Test
+    public void testNoToken(){
+        given()
+                .get("/movie/1359227/rating")
+                .then()
+                .statusCode(401);
+    }
+
 }
