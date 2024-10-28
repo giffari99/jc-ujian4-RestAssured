@@ -28,8 +28,7 @@ public class AddRatingTest {
         request.header("authorization", myToken);
         request.header("content-type", "application/json");
         request.body(requestBody.toJSONString());
-        Response response = request.post("/movie/1185239/rating");
-
+        Response response = request.post("/movie/1359227/rating");
         Assert.assertEquals(response.getStatusCode(), 201);
         Assert.assertTrue(response.getBody().jsonPath().getBoolean("success"));
         Assert.assertTrue(response.getBody().jsonPath().getString("status_message").toLowerCase().contains("success"));
